@@ -72,3 +72,13 @@ main {
     font-size: 2.5rem;
     color: #4A695E;
 }
+
+.moreInfo_specialties, .moreInfo_issues {
+    color: #4A695E;
+}
+
+
+
+footer {
+    text-align: center;
+}
