@@ -6,17 +6,19 @@ if (!$_POST) {
 }
 
 // Store $_POST data to variables for readability
-$first_name_value = $_POST['first_name'];
-$last_name_value = $_POST['last_name'];
-$email_value = $_POST['email'];
-$phone_value = $_POST['phone'];
-$id_value = $_POST['id'];
-
-// Create a SQL statement to insert the data into the database
-$query = "UPDATE users SET first_name = '{$first_name_value}', last_name = '{$last_name_value}', email = '{$email_value}', phone = '{$phone_value}' WHERE id = {$id_value}";
-
-// Run the SQL statement
-$result = mysqli_query($db_connection, $query);
+$therapist_name = $_POST['therapist_name'];
+$therapist_job = $_POST['therapist_job'];
+$therapist_pronoun = $_POST['therapist_pronoun'];
+$therapist_email = $_POST['therapist_email'];
+$therapist_phone = $_POST['therapist_phone'];
+$therapist_about = $_POST['therapist_about'];
+$therapist_specialties = $_POST['therapist_specialties'];
+$therapist_issues = $_POST['therapist_issues'];
+// var_dump($therapist_job);
+// die();
+$result = add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues);
+// var_dump($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues);
+// die();
 
 // Check there are no errors with our SQL statement
 if ($result) {

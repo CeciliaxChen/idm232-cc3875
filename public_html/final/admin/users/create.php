@@ -34,7 +34,7 @@ $result = mysqli_query($db_connection, $query);
               </div>
               <div class="block">
                 <label for=""> Therapist Pronoun </label>
-                <input class="border-black border-2" type="email" name="therapist_pronoun">
+                <input class="border-black border-2" type="text" name="therapist_pronoun">
               </div>
               <div class="block">
                 <label for=""> Therapist Email </label>

@@ -28,18 +28,18 @@ if (!isset($therapists)) {
     while ($therapist = mysqli_fetch_array($therapists)) {
         echo "
           <tr>
-            <td>{$therapist['id']}</td>
-            <td>{$therapist['therapist_name']}</td>
-            <td>{$therapist['therapist_job']}</td>
-            <td>{$therapist['therapist_pronoun']}</td>
-            <td>{$therapist['therapist_email']}</td>
-            <td>{$therapist['therapist_phone']}</td>
-            <td>{$therapist['therapist_about']}</td>
-            <td>{$therapist['therapist_specialities']}</td>
-            <td>{$therapist['therapist_issues']}</td>
+            <td>{$therapists['id']}</td>
+            <td>{$therapists['therapist_name']}</td>
+            <td>{$therapists['therapist_job']}</td>
+            <td>{$therapists['therapist_pronoun']}</td>
+            <td>{$therapists['therapist_email']}</td>
+            <td>{$therapists['therapist_phone']}</td>
+            <td>{$therapists['therapist_about']}</td>
+            <td>{$therapists['therapist_specialties']}</td>
+            <td>{$therapists['therapist_issues']}</td>
             <td>
-              <a href='{$site_url}/admin/users/edit.php?id={$therapist['id']}'>Edit</a>
-              <a href='{$site_url}/admin/users/delete.php?id={$therapist['id']}'>Delete</a>
+              <a href='{$site_url}/admin/users/edit.php?id={$therapists['id']}'>Edit</a>
+              <a href='{$site_url}/admin/users/delete.php?id={$therapists['id']}'>Delete</a>
             </td>
           </tr>";
     }
