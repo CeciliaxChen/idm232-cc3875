@@ -1,2 +1,0 @@
-<?php 
-$main_navigation 
