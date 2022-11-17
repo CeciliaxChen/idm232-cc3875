@@ -14,9 +14,11 @@ $therapist_phone = $_POST['therapist_phone'];
 $therapist_about = $_POST['therapist_about'];
 $therapist_specialties = $_POST['therapist_specialties'];
 $therapist_issues = $_POST['therapist_issues'];
-
+// var_dump($therapist_job);
+// die();
 $result = add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues);
-
+// var_dump($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues);
+// die();
 // Check there are no errors with our SQL statement
 if ($result) {
     redirect_to('/admin/users');

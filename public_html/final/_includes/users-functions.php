@@ -25,8 +25,10 @@ function add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $the
 {
     global $db_connection;
     $query = 'INSERT INTO therapists';
-    $query .= ' (therapist_name, therapist_job, therapist_pronoun, therapist_email, therapist_phone, therapist_about, therapist_specialities, therapist_issues)';
-    $query .= " VALUES ('$therapist_name', '$therapist_job', '$therapist_pronoun', '$therapist_email', '$therapist_phone', '$therapist_about', '$therapist_specialities', '$therapist_issues')";
+    $query .= ' (therapist_name, therapist_job, therapist_pronoun, therapist_email, therapist_phone, therapist_about, therapist_specialties, therapist_issues)';
+    $query .= " VALUES ('$therapist_name', '$therapist_job', '$therapist_pronoun', '$therapist_email', '$therapist_phone', '$therapist_about', '$therapist_specialties', '$therapist_issues')";
+    // var_dump($query);
+    // die();
 
     $result = mysqli_query($db_connection, $query);
     return $result;
