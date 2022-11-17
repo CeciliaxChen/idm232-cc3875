@@ -81,4 +81,29 @@ main {
 
 footer {
     text-align: center;
+    margin: 2rem 0;
+}
+
+
+
+@media screen and (min-width: 700px) {    
+    .therapist {
+        width: 90%;
+    }
+
+    .moreInfo_about {
+        font-size: 2rem;
+    }
+
+    .aboutInfo {
+        font-size: 1rem;
+    }
+
+    .moreInfo_specialties, .moreInfo_issues {
+        margin-top: 1rem;
+    }
+
+    .specialtiesList, .issuesList {
+        margin-left: 3rem;
+    }
 }

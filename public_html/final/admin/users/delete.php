@@ -6,14 +6,14 @@ if (isset($_GET['id'])) {
     die('ID is needed in URL');
 }
 
-// get users data from database
-$query = "DELETE FROM users WHERE id = {$id}";
+// get therapists data from database
+$query = "DELETE FROM therapists WHERE id = {$id}";
 $result = mysqli_query($db_connection, $query);
 
 // Check there are no errors with our SQL statement
 if ($result) {
-    redirect_to('/admin/users');
+    redirect_to('/admin/therapists');
 } else {
-    $error_message = 'Could Not Delete User';
-    redirect_to('/admin/users?error=' . $error_message);
+    $error_message = 'Could Not Delete therapist';
+    redirect_to('/admin/therapists?error=' . $error_message);
 }
