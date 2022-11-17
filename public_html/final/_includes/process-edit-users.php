@@ -27,3 +27,4 @@ if ($result) {
     $error_message = 'User was not updated';
     redirect_to('/admin/users?error=' . $error_message);
 }
+?>

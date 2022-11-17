@@ -17,3 +17,4 @@ if ($result) {
     $error_message = 'Could Not Delete Therapist';
     redirect_to('/admin/therapists?error=' . $error_message);
 }
+?>

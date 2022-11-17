@@ -17,8 +17,7 @@ $therapists = get_therapists();
           if (isset($_GET['error'])) {
               echo '<p class="text-red-500">' . $_GET['error'] . '</p>';
           }
-
-?>
+        ?>
       </div>
       <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
         <button type="button"
@@ -86,4 +85,4 @@ $therapists = get_therapists();
 
 
 
-<?php include_once __DIR__ . '/../../_components/footer.php';
+<?php include_once __DIR__ . '/../../_components/footer.php';?> 

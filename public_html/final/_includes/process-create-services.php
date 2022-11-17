@@ -19,3 +19,4 @@ if ($result) {
     $error_message = 'Sorry there was an error creating the user';
     redirect_to('/admin/services?error=' . $error_message);
 }
+?>

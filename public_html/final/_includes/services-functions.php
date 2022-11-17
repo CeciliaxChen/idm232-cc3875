@@ -16,3 +16,4 @@ function add_services($name, $price, $description)
     $result = mysqli_query($db_connection, $query);
     return $result;
 }
+?>

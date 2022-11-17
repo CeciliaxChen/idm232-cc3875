@@ -30,3 +30,4 @@ include_once __DIR__ . '/_includes/database.php';
 include_once __DIR__ . '/_includes/helper-functions.php';
 include_once __DIR__ . '/_includes/users-functions.php';
 include_once __DIR__ . '/_includes/services-functions.php';
+?>

@@ -2,10 +2,10 @@
 
 // if $page_title variable doesn't exist, create a default one
 if (!isset($page_title)) {
-    $page_title = '🚨 Missing Title 🚨';
+    $page_title = 'Home';
 }
-$site_title = 'JAWN Clips';
-$document_title = $page_title . ' | ' . $site_title; // Home | JAWN Clips
+$site_title = 'Couch Therapy';
+$document_title = $page_title . ' | ' . $site_title; // Home | Couch Therapy
 
 ?>
 <!DOCTYPE html>
@@ -22,3 +22,14 @@ $document_title = $page_title . ' | ' . $site_title; // Home | JAWN Clips
 
 <body>
   <!-- Main Content Begins -->
+  <h1> Couch Therapy </h1>
+    <header class="header"> 
+        <!-- couch logo -->
+        <img src="images/couch.png" alt="couch" class="therapyLogo"> 
+        <!-- profile -->
+        <img src="images/user.png" alt="user" class="userIcon">
+        <!-- admin -->
+        <img src="images/admin.png" alt="admin" class="adminIcon"> 
+        <!-- search -->
+        <img src="images/search.png" alt="search" class="searchIcon">
+    </header>

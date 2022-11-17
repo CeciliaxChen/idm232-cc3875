@@ -33,3 +33,4 @@ function add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $the
     $result = mysqli_query($db_connection, $query);
     return $result;
 }
+?>

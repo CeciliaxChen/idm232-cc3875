@@ -26,3 +26,4 @@ if ($result) {
     $error_message = 'Sorry there was an error creating the therapist';
     redirect_to('/admin/users?error=' . $error_message);
 }
+?>
