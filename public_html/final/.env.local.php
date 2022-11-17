@@ -10,3 +10,4 @@ $APP_CONFIG = [
     'database_name' => 'local_idm232_01',
     // cecilik6_production_idm232 ????
 ];
+?>
