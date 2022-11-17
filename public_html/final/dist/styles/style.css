@@ -208,6 +208,9 @@ footer {
   margin: 2rem 0;
 }
 
+.table{
+  display: block;
+}
 
 
 @media screen and (min-width: 700px) {    

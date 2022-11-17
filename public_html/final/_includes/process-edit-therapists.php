@@ -14,13 +14,31 @@ $therapist_phone = $_POST['therapist_phone'];
 $therapist_about = $_POST['therapist_about'];
 $therapist_specialties = $_POST['therapist_specialties'];
 $therapist_issues = $_POST['therapist_issues'];
+$id_value = $_POST['id'];
+
 // var_dump($therapist_job);
 // die();
-$result = add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues);
 // var_dump($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues);
 // die();
 
 // Check there are no errors with our SQL statement
+$query = "UPDATE therapists SET therapist_name = '{$therapist_name}',
+therapist_job = '{$therapist_job}',
+therapist_pronoun = '{$therapist_pronoun}',
+therapist_email = '{$therapist_email}',
+therapist_phone = '{$therapist_phone}',
+therapist_about = '{$therapist_about}',
+therapist_specialties = '{$therapist_specialties}',
+therapist_issues = '{$therapist_issues}'
+ WHERE id = '{$id_value}'";
+
+// var_dump($id_value);
+// var_dump($query);
+// die();
+
+// Run the SQL statement
+$result = mysqli_query($db_connection, $query);
+
 if ($result) {
     redirect_to('/admin/users');
 } else {

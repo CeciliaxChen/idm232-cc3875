@@ -7,7 +7,7 @@
 function get_therapists()
 {
     global $db_connection;
-    $query = 'SELECT * FROM users';
+    $query = 'SELECT * FROM therapists';
     $result = mysqli_query($db_connection, $query);
     return $result;
 }

@@ -11,7 +11,7 @@ $query = "SELECT * FROM therapists WHERE id = {$_GET['id']}";
 $result = mysqli_query($db_connection, $query);
 if ($result->num_rows > 0) {
     // Get row from results and assign to $therapist variable;
-    $therapists = mysqli_fetch_assoc($result);
+    $therapist = mysqli_fetch_assoc($result);
 } else {
     $error_message = 'Therpist does not exist';
     // redirect_to('/admin/therapists?error=' . $error_message);
@@ -49,7 +49,7 @@ if ($result->num_rows > 0) {
               </div>
               <div class=" block">
                 <label for="">Therapist Email</label>
-                <input class="border-black border-2" type="email" name="therapist_email" 
+                <input class="border-black border-2" type="text" name="therapist_email" 
                   value="<?php echo $therapist['therapist_email']?>">
               </div>
               <div class=" block">
@@ -76,7 +76,7 @@ if ($result->num_rows > 0) {
                   py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2
                   focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto" type="submit" value="Submit">
 
-              <input type="hidden" name="id" value="">
+              <input type="hidden" name="id" value="<?php echo $therapist['id']?>">
             </form>
           </div>
         </div>

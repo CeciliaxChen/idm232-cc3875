@@ -12,7 +12,7 @@ $result = mysqli_query($db_connection, $query);
 
 // Check there are no errors with our SQL statement
 if ($result) {
-    redirect_to('/admin/therapists');
+    redirect_to('/admin/users');
 } else {
     $error_message = 'Could Not Delete Therapist';
     redirect_to('/admin/therapists?error=' . $error_message);
