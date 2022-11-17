@@ -11,7 +11,7 @@ $query = "SELECT * FROM therapists WHERE id = {$_GET['id']}";
 $result = mysqli_query($db_connection, $query);
 if ($result->num_rows > 0) {
     // Get row from results and assign to $therapist variable;
-    $therapist = mysqli_fetch_assoc($result);
+    $therapists = mysqli_fetch_assoc($result);
 } else {
     $error_message = 'Therpist does not exist';
     // redirect_to('/admin/therapists?error=' . $error_message);
@@ -32,23 +32,45 @@ if ($result->num_rows > 0) {
           <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
             <form action="<?php echo site_url(); ?>/_includes/process-edit-therapists.php" method="POST">
               <div class="block">
-                <label for="">First Name</label>
-                <input class="border-black border-2" type="text" name="first_name"
-                  value="<?php echo $therapist['first_name']?>">
+                <label for="">Therapist Name</label>
+                <input class="border-black border-2" type="text" name="therapist_name"
+                  value="<?php echo $therapist['therapist_name']?>">
               </div>
 
               <div class="block">
-                <label for="">Last Name</label>
-                <input class="border-black border-2" type="text" name="last_name"
-                  value="<?php echo $therapist['last_name']?>">
+                <label for="">Therapist Job</label>
+                <input class="border-black border-2" type="text" name="therapist_job"
+                  value="<?php echo $therapist['therapist_job']?>">
               </div>
               <div class=" block">
-                <label for="">Email</label>
-                <input class="border-black border-2" type="email" name="email" value="<?php echo $therapist['email']?>">
+                <label for="">Therapist Pronoun</label>
+                <input class="border-black border-2" type="text" name="therapist_pronoun" 
+                  value="<?php echo $therapist['therapist_pronoun']?>">
               </div>
               <div class=" block">
-                <label for="">Phone Number</label>
-                <input class="border-black border-2" type="text" name="phone" value="<?php echo $therapist['phone']?>">
+                <label for="">Therapist Email</label>
+                <input class="border-black border-2" type="email" name="therapist_email" 
+                  value="<?php echo $therapist['therapist_email']?>">
+              </div>
+              <div class=" block">
+                <label for="">Therapist Phone</label>
+                <input class="border-black border-2" type="text" name="therapist_phone" 
+                  value="<?php echo $therapist['therapist_phone']?>">
+              </div>
+              <div class=" block">
+                <label for="">Therapist About</label>
+                <input class="border-black border-2 js-tinymce" type="text" name="therapist_about" 
+                  value="<?php echo $therapist['therapist_about']?>">
+              </div>
+              <div class=" block">
+                <label for="">Therapist Specialties</label>
+                <input class="border-black border-2 js-tinymce" type="text" name="therapist_specialties" 
+                  value="<?php echo $therapist['therapist_specialties']?>">
+              </div>
+              <div class=" block">
+                <label for="">Therapist Issues</label>
+                <input class="border-black border-2 js-tinymce" type="text" name="therapist_issues" 
+                  value="<?php echo $therapist['therapist_issues']?>">
               </div>
               <input class=" nline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4
                   py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2

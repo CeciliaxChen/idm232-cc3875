@@ -14,6 +14,6 @@ $result = mysqli_query($db_connection, $query);
 if ($result) {
     redirect_to('/admin/therapists');
 } else {
-    $error_message = 'Could Not Delete therapist';
+    $error_message = 'Could Not Delete Therapist';
     redirect_to('/admin/therapists?error=' . $error_message);
 }
