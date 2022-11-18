@@ -24,6 +24,11 @@ function add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $the
 
 {
     global $db_connection;
+
+    // $default_password = 'idm232';
+    // $password = password_hash($default_password, PASSWORD_DEFAULT);
+
+
     $query = 'INSERT INTO therapists';
     $query .= ' (therapist_name, therapist_job, therapist_pronoun, therapist_email, therapist_phone, therapist_about, therapist_specialties, therapist_issues)';
     $query .= " VALUES ('$therapist_name', '$therapist_job', '$therapist_pronoun', '$therapist_email', '$therapist_phone', '$therapist_about', '$therapist_specialties', '$therapist_issues')";

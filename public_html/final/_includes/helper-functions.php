@@ -52,4 +52,11 @@ function getFormattedDateTime()
 {
     return  date('Y-m-d H:i:s');
 }
+
+
+// function sanitize_value($value)
+// {
+//     global $db_connection;
+//     return mysqli_real_escape_string($db_connection, $value);
+// }
 ?>
