@@ -133,18 +133,18 @@ table {
 
 /* FONTS */
 @font-face {
-  font-family: 'Raleway-Regular', sans-serif;
-  src: url('Raleway-Regular.woff2');
+  font-family: 'Raleway-Regular';
+  src: url('../../fonts/Raleway-Regular.woff2');
 }
 
 @font-face {
-  font-family: 'Raleway-Thin', sans-serif;
-  src: url('Raleway-Thin.woff2');
+  font-family: 'Raleway-Thin';
+  src: url('../../fonts/Raleway-Thin.woff2');
 }
 
 @font-face {
-  font-family: 'Raleway-Medium', sans-serif;
-  src: url('Raleway-Medium.woff2');
+  font-family: 'Raleway-Medium';
+  src: url('../../fonts/Raleway-Medium.woff2');
 }
 
 h1, h2, h3, h4, h5, li {

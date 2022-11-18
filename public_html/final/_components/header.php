@@ -10,13 +10,13 @@ $document_title = $page_title . ' | ' . $site_title; // Home | Couch Therapy
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="<?php echo site_url(); ?>/dist/images/favicon.ico">
-  <link rel="stylesheet" href="<?php echo site_url(); ?>/dist/styles/style.css">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="<?php echo site_url(); ?>/dist/images/favicon.ico">
+    <link rel="stylesheet" href="<?php echo site_url(); ?>/dist/styles/style.css">
   <title><?php echo $document_title ; ?></title>
 </head>
 
@@ -25,11 +25,11 @@ $document_title = $page_title . ' | ' . $site_title; // Home | Couch Therapy
   <h1> Couch Therapy </h1>
     <header class="header"> 
         <!-- couch logo -->
-        <img src="images/couch.png" alt="couch" class="therapyLogo"> 
+        <img src="<?php echo site_url(); ?>/dist/images/couch.png" alt="couch" class="therapyLogo"> 
         <!-- profile -->
-        <img src="images/user.png" alt="user" class="userIcon">
+        <img src="<?php echo site_url(); ?>/dist/images/user.png" alt="user" class="userIcon">
         <!-- admin -->
-        <img src="images/admin.png" alt="admin" class="adminIcon"> 
+        <img src="<?php echo site_url(); ?>/dist/images/admin.png" alt="admin" class="adminIcon"> 
         <!-- search -->
-        <img src="images/search.png" alt="search" class="searchIcon">
+        <img src="<?php echo site_url(); ?>/dist/images/search.png" alt="search" class="searchIcon">
     </header>
