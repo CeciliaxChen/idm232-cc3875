@@ -26,40 +26,40 @@ $result = mysqli_query($db_connection, $query);
             <form action="<?php echo site_url(); ?>/_includes/process-create-therapists.php" method="POST">
               <div class="block">
                 <label for="">Therapist Name </label>
-                <input class="border-black border-2" type="text" name="name">
+                <input class="border-black border-2" type="text" name="therapist_name">
               </div>
               <div class="block">
                 <label for="">Therapist Job</label>
-                <input class="border-black border-2" type="text" name="job">
+                <input class="border-black border-2" type="text" name="therapist_job">
               </div>
               <div class="block">
                 <label for="">Therapist Pronoun</label>
-                <input class="border-black border-2" type="text" name="pronoun">
+                <input class="border-black border-2" type="text" name="therapist_pronoun">
               </div>
               <div class="block">
                 <label for="">Therapist Email</label>
-                <input class="border-black border-2" type="text" name="email">
+                <input class="border-black border-2" type="text" name="therapist_email">
               </div>
               <div class="block">
                 <label for="">Therapist Phone</label>
-                <input class="border-black border-2" type="number" name="phone">
+                <input class="border-black border-2" type="number" name="therapist_phone">
               </div>
               <div class="block">
                 <label for="">Therapist About</label>
                 <br>
-                <textarea class="border-black border-2 js-tinymce" name="about" id="" cols="30"
+                <textarea class="border-black border-2 js-tinymce" name="therapist_about" id="" cols="30"
                   rows="10"></textarea>
               </div>
               <div class="block">
                 <label for="">Therapist Specialties</label>
                 <br>
-                <textarea class="border-black border-2 js-tinymce" name="specialties" id="" cols="30"
+                <textarea class="border-black border-2 js-tinymce" name="therapist_specialties" id="" cols="30"
                   rows="10"></textarea>
               </div>
               <div class="block">
                 <label for="">Therapist Issues</label>
                 <br>
-                <textarea class="border-black border-2 js-tinymce" name="issues" id="" cols="30"
+                <textarea class="border-black border-2 js-tinymce" name="therapist_issues" id="" cols="30" id="" cols="30"
                   rows="10"></textarea>
               </div>
 

@@ -1,6 +1,6 @@
 <?php
 include_once __DIR__ . '/../../app.php';
-$page_title = 'Services';
+$page_title = 'Therapists';
 include_once __DIR__ .'/../../_components/header.php';
 $therapists = get_therapists();
 
@@ -67,8 +67,8 @@ if ($results->num_rows > 0) {
       <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
         <button type="button"
           class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
-          <a href="<?php echo site_url() . '/admin/services/create.php' ?>">
-            Add service</a></button>
+          <a href="<?php echo site_url() . '/admin/therapists/create.php' ?>">
+            Add Therapist</a></button>
       </div>
     </div>
 

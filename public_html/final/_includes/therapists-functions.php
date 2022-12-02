@@ -55,6 +55,24 @@ function delete_therapist_by_id($id)
     $result = mysqli_query($db_connection, $query);
     return $result;
 }
+
+function add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues)
+{
+    global $db_connection;
+    $default_password = 'idm232';
+    $password = password_hash($default_password, PASSWORD_DEFAULT);
+
+    $query = 'INSERT INTO therapists';
+    $query .= ' (therapist_name, therapist_job, therapist_pronoun, therapist_email, therapist_phone, therapist_about, therapist_specialties, therapist_issues)';
+    $query .= " VALUES ('$therapist_name', '$therapist_job', '$therapist_pronoun', '$therapist_email', '$therapist_phone', '$therapist_about', '$therapist_specialties', '$therapist_issues')";
+    // var_dump($query);
+    // die();
+
+    $result = mysqli_query($db_connection, $query);
+    return $result;
+}
+
+
 ?>
 
 

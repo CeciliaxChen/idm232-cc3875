@@ -18,8 +18,6 @@ $document_title = $page_title . ' | ' . $site_title; // Home | Couch Therapy
       <!-- Including TinyMCE Library -->
   <script src="https://cdn.tiny.cloud/1/7rpnj47it93x8jhvzo8vbgdulo0j4qdj5xdmud6xc46gy8fb/tinymce/6/tinymce.min.js"
     referrerpolicy="origin"></script>
-  <!-- Including TailwindCss Library -->
-  <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="<?php echo site_url(); ?>/dist/images/favicon.ico">
     <link rel="stylesheet" href="<?php echo site_url(); ?>/dist/styles/style.css">
   <title><?php echo $document_title ; ?></title>
