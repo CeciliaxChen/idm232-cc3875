@@ -12,6 +12,15 @@ $therapists = get_therapists();
         <h1 class="text-xl font-semibold text-gray-900"> Therapists </h1>
         <p class="mt-2 text-sm text-gray-700">A list of all the therapists in your account including their name, title, email
           and role.</p>
+        <form action="<?php echo site_url(); ?>/admin/search" method="GET">
+          <input class="border-black border-2" 
+          type="text" 
+          name="search" 
+          id="search" 
+          placeholder="Search">
+          <button type="submit"> Search</button> 
+        </form>
+
         <?php
         // If error query param exist, show error message
           if (isset($_GET['error'])) {
@@ -66,7 +75,7 @@ $therapists = get_therapists();
             <td>{$therapist['therapist_issues']}</td>
             <td>
               <a href='{$site_url}/admin/users/edit.php?id={$therapist['id']}'>Edit</a>
-              <a href='{$site_url}/admin/users/delete.php?id={$therapist['id']}'>Delete</a>
+              <a href='{$site_url}/admin/therapists/delete.php?id={$therapist['id']}'>Delete</a>
             </td>
           </tr>";
     }
