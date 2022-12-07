@@ -19,53 +19,58 @@ $therapist = get_therapist_by_id($_GET['id']);
             <form action="<?php echo site_url(); ?>/_includes/process-edit-therapists.php" method="POST">
               <div class="block">
                 <label for="">Therapist Name</label>
-                <input class="border-black border-2" type="text" name="name" value="<?php echo $therapist['therapist_name']; ?>">
-              </div>
-              <div class="block">
-                <label for="">Therapist Name </label>
-                <input class="border-black border-2" type="text" name="name"> 
+                <input class="border-black border-2" type="text" name="name" 
                 value="<?php echo $therapist['therapist_name']; ?>">
               </div>
               <div class="block">
+                <label for="">Therapist Name </label>
+                <input class="border-black border-2" type="text" name="name" 
+                value="<?php echo $therapist['therapist_name']; ?>">              
+              </div>
+              <div class="block">
                 <label for="">Therapist Job</label>
-                <input class="border-black border-2" type="text" name="job">
+                <input class="border-black border-2" type="text" name="job"
                 value="<?php echo $therapist['therapist_job']; ?>">
               </div>
               <div class="block">
                 <label for="">Therapist Pronoun</label>
-                <input class="border-black border-2" type="text" name="pronoun">
+                <input class="border-black border-2" type="text" name="pronoun"
                 value="<?php echo $therapist['therapist_pronoun']; ?>">
               </div>
               <div class="block">
                 <label for="">Therapist Email</label>
-                <input class="border-black border-2" type="text" name="email">
+                <input class="border-black border-2" type="text" name="email"
                 value="<?php echo $therapist['therapist_email']; ?>">
               </div>
               <div class="block">
                 <label for="">Therapist Phone</label>
-                <input class="border-black border-2" type="number" name="phone">
+                <input class="border-black border-2" type="number" name="phone"
                 value="<?php echo $therapist['therapist_phone']; ?>">
               </div>
               <div class="block">
                 <label for="">Therapist About</label>
                 <br>
                 <textarea class="border-black border-2 js-tinymce" name="about" id="" cols="30"
-                  rows="10"></textarea>
-                value="<?php echo $therapist['therapist_about']; ?>">
+                  rows="10">
+                  <?php echo $therapist['therapist_about']; ?>
+                </textarea>
               </div>
               <div class="block">
                 <label for="">Therapist Specialties</label>
                 <br>
                 <textarea class="border-black border-2 js-tinymce" name="specialties" id="" cols="30"
-                  rows="10"></textarea>
-                value="<?php echo $therapist['therapist_specialties']; ?>">
+                  rows="10">
+                  <?php echo $therapist['therapist_specialties']; ?>
+                </textarea>
               </div>
               <div class="block">
                 <label for="">Therapist Issues</label>
                 <br>
                 <textarea class="border-black border-2 js-tinymce" name="issues" id="" cols="30"
-                  rows="10"></textarea>
-                value="<?php echo $therapist['therapist_issues']; ?>">
+                  rows="10">
+                  <?php echo $therapist['therapist_issues']; ?>
+                </textarea>
+                
               </div>
               <input
                 class="nline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"

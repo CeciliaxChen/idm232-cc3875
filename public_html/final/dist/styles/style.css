@@ -160,22 +160,7 @@ header {
   margin: 3rem 0 0 3rem;
 }
 
-.searchIcon {
-  float: right;
-  margin-right: 7rem;
-}
-
-.adminIcon {
-  float: right;
-  margin-right: 5rem;
-}
-
-.userIcon {
-  float: right;
-  margin-right: 3rem;
-}
-
-main {
+/* main {
   margin: 3rem;
   display: flex;
 }
@@ -199,7 +184,7 @@ main {
 
 .moreInfo_specialties, .moreInfo_issues {
   color: #4A695E;
-}
+} */
 
 
 
@@ -208,12 +193,26 @@ footer {
   margin: 2rem 0;
 }
 
-.table{
+.table {
   display: block;
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
 
-@media screen and (min-width: 700px) {    
+.navbar {
+  list-style-type: none;
+  
+}
+
+.nav-link{
+  display: inline-block;
+}
+
+
+/* @media screen and (min-width: 700px) {    
   .therapist {
       width: 90%;
   }
@@ -233,4 +232,4 @@ footer {
   .specialtiesList, .issuesList {
       margin-left: 3rem;
   }
-}
+} */
