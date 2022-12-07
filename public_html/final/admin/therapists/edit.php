@@ -22,23 +22,6 @@ $therapist = get_therapist_by_id($_GET['id']);
                 <input class="border-black border-2" type="text" name="name" value="<?php echo $therapist['therapist_name']; ?>">
               </div>
               <div class="block">
-                <label for="">Therapist Job</label>
-                <input class="border-black border-2" type="text" name="job"
-                  value="<?php echo $therapist['job']; ?>">
-              </div>
-              <div class="block">
-                <label for="">description</label>
-                <br>
-                <textarea class="border-black border-2 js-tinymce" name="description" id="" cols="30" rows="10">
-                <?php echo $therapist['description']; ?>
-              </textarea>
-                <input type="hidden" name="id" value=<?php echo $_GET['id']; ?>>
-              </div>
-
-
-
-
-              <div class="block">
                 <label for="">Therapist Name </label>
                 <input class="border-black border-2" type="text" name="name"> 
                 value="<?php echo $therapist['therapist_name']; ?>">
@@ -84,8 +67,6 @@ $therapist = get_therapist_by_id($_GET['id']);
                   rows="10"></textarea>
                 value="<?php echo $therapist['therapist_issues']; ?>">
               </div>
-
-
               <input
                 class="nline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
                 type="submit" value="Update">

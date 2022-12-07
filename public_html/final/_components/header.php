@@ -25,15 +25,27 @@ $document_title = $page_title . ' | ' . $site_title; // Home | Couch Therapy
 
 <body>
   <!-- Main Content Begins -->
-  <?php include __DIR__ . '/navigation-main.php'; ?> 
-  <h1> Couch Therapy </h1>
-    <header class="header"> 
-        <!-- couch logo -->
-        <img src="<?php echo site_url(); ?>/dist/images/couch.png" alt="couch" class="therapyLogo"> 
-        <!-- profile -->
-        <img src="<?php echo site_url(); ?>/dist/images/user.png" alt="user" class="userIcon">
-        <!-- admin -->
-        <img src="<?php echo site_url(); ?>/dist/images/admin.png" alt="admin" class="adminIcon"> 
-        <!-- search -->
-        <img src="<?php echo site_url(); ?>/dist/images/search.png" alt="search" class="searchIcon">
-    </header>
+  <div class="header-container"> 
+    <div class="nav-container"> 
+      <div class="logo-container"> 
+        <a href="<?php echo site_url(); ?>/index.php" class="logo"> 
+          <img src="<?php echo site_url(); ?>/dist/images/couch.png" alt="couch" class="therapyLogo"> 
+      </a> 
+      </div> 
+
+      <ul id="navbar" class="navbar"> 
+        <li>
+          <a href="<?php echo site_url(); ?>/admin/therapists/index.php" class="nav-link"> Admin </a> 
+          <!-- <img src="<?php echo site_url(); ?>/dist/images/admin.png" alt="admin" class="adminIcon"> -->
+        </li> 
+        <li>
+          <a href="<?php echo site_url(); ?>/therapists.php" class="nav-link"> Therapists </a>
+          <!-- <img src="<?php echo site_url(); ?>/dist/images/user.png" alt="user" class="userIcon"> -->
+        </li> 
+        <li>
+          <a href="<?php echo site_url(); ?>/admin/search/index.php" class="nav-link"> Search </a>
+          <!-- <img src="<?php echo site_url(); ?>/dist/images/search.png" alt="search" class="searchIcon"> -->
+        </li> 
+      </ul>
+    </div> 
+  </div> 

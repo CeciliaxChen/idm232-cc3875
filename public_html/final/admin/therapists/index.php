@@ -10,7 +10,7 @@ $therapists = get_therapists();
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
         <h1 class="text-xl font-semibold text-gray-900">Therapists</h1>
-        <p class="mt-2 text-sm text-gray-700">A list of therapists the users in your account including their name, price
+        <p class="mt-2 text-sm text-gray-700"> A list of therapists the users in your account including their name, job, pronoun, email, phone, about, specialties, issues 
         </p>
         <?php
         // If error query param exist, show error message

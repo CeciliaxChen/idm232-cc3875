@@ -41,3 +41,16 @@ $main_navigation = [
 
   </div>
 </header>
+
+
+<h1> Couch Therapy </h1>
+    <header class="header">
+        <!-- couch logo -->
+        <img src="<?php echo site_url(); ?>/dist/images/couch.png" alt="couch" class="therapyLogo"> 
+        <!-- profile -->
+        <img src="<?php echo site_url(); ?>/dist/images/user.png" alt="user" class="userIcon">
+        <!-- admin -->
+        <img src="<?php echo site_url(); ?>/dist/images/admin.png" alt="admin" class="adminIcon"> 
+        <!-- search -->
+        <img src="<?php echo site_url(); ?>/dist/images/search.png" alt="search" class="searchIcon">
+    </header>

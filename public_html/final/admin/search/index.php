@@ -5,10 +5,10 @@ include_once __DIR__ .'/../../_components/header.php';
 $therapists = get_therapists();
 
 // Check if search exist in query
-if (isset($GET['search'])) {
-    $search = $GET['search'];
+if (isset($_GET['search'])) {
+    $search = $_GET['search'];
 } else {
-    search = '';
+    $search = '';
 }
 
 // echo '<pre>';
@@ -42,7 +42,6 @@ if ($results->num_rows > 0) {
 
 <div class="mx-auto my-16 max-w-7xl px-4">
   <div class="px-4 sm:px-6 lg:px-8">
-    <?php include __DIR__ . '/../../_components/navigation-admin.php'; ?>
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
         <h1 class="text-xl font-semibold text-gray-900">Search Results</h1>
@@ -77,7 +76,7 @@ if ($results->num_rows > 0) {
       if ($therapists_results) {
           while ($therapists_results = mysqli_fetch_assoc($results)) {
               echo '<div class="flex flex-row justify-center items-center">';
-              echo '<h2>' . $therapists_results['first_name'] . ' ' . $therapists_results['last_name'] . '</h2>';
+              echo '<h2>' . $therapists_results['therapist_name'] . '</h2>';
               echo '</div>';
           }
       }
