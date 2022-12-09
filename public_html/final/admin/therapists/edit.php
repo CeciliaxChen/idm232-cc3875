@@ -5,6 +5,21 @@ include_once __DIR__ . '/../../_components/header.php';
 $therapist = get_therapist_by_id($_GET['id']);
 ?>
 
+<?php
+// get therapists data from database
+$query = "SELECT * FROM therapists WHERE id = {$_GET['id']}";
+$result = mysqli_query($db_connection, $query);
+if ($result->num_rows > 0) {
+    // Get row from results and assign to $therapist variable;
+    $therapist = mysqli_fetch_assoc($result);
+} else {
+    $error_message = 'Therapist does not exist';
+    // redirect_to('/admin/therapists?error=' . $error_message);
+}
+
+?>
+
+
 <div class="mx-auto my-16 max-w-7xl px-4">
   <div class="px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center">
@@ -75,6 +90,8 @@ $therapist = get_therapist_by_id($_GET['id']);
               <input
                 class="nline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
                 type="submit" value="Update">
+
+                <input type="hidden" name="id" value="<?php echo $therapist['id']?>">
             </form>
           </div>
         </div>

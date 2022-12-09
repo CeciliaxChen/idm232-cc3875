@@ -23,16 +23,8 @@ $id_value = sanitize_value($_POST['id']);
 // die();
 
 // Check there are no errors with our SQL statement
-$query = "UPDATE therapists SET therapist_name = '{$therapist_name}',
-therapist_job = '{$therapist_job}',
-therapist_pronoun = '{$therapist_pronoun}',
-therapist_email = '{$therapist_email}',
-therapist_phone = '{$therapist_phone}',
-therapist_about = '{$therapist_about}',
-therapist_specialties = '{$therapist_specialties}',
-therapist_issues = '{$therapist_issues}',
-image_path = '{$image_path}'
- WHERE id = '{$id_value}'";
+$query = "UPDATE therapists SET therapist_name = '{$therapist_name}', therapist_job = '{$therapist_job}', therapist_pronoun = '{$therapist_pronoun}', therapist_email = '{$therapist_email}', therapist_phone = '{$therapist_phone}', therapist_about = '{$therapist_about}', therapist_specialties = '{$therapist_specialties}', therapist_issues = '{$therapist_issues}', image_path = '{$image_path}'
+ WHERE id = {$id_value}";
 
 // var_dump($id_value);
 // var_dump($query);
@@ -44,7 +36,7 @@ $result = mysqli_query($db_connection, $query);
 if ($result) {
     redirect_to('/admin/therapists');
 } else {
-    $error_message = 'User was not updated';
+    $error_message = 'Therapist was not updated';
     redirect_to('/admin/therapists?error=' . $error_message);
 }
 ?>

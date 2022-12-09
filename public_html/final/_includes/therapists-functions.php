@@ -23,6 +23,7 @@ function get_therapists()
     $query = 'SELECT * FROM therapists';
     $result = mysqli_query($db_connection, $query);
     return $result;
+    $query = 'SELECT * FROM therapists ORDER BY title ASC';
 }
 
 function get_therapist_by_id($id)
