@@ -3,7 +3,7 @@
   <footer class="footerNote">
   <h4> &copy; Images and content courtesy of PsychologyToday. For educational purposes only. </h4>
 
-    <p class="">
+    <p class="footerNote">
       &copy;<?php echo date('Y'); ?> IDM 232. All
       rights reserved.
     </p>

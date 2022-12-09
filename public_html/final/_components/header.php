@@ -36,15 +36,12 @@ $document_title = $page_title . ' | ' . $site_title; // Home | Couch Therapy
       <ul id="navbar" class="navbar"> 
         <li>
           <a href="<?php echo site_url(); ?>/admin/therapists/index.php" class="nav-link"> Admin </a> 
-          <!-- <img src="<?php echo site_url(); ?>/dist/images/admin.png" alt="admin" class="adminIcon"> -->
         </li> 
         <li>
           <a href="<?php echo site_url(); ?>/therapists.php" class="nav-link"> Therapists </a>
-          <!-- <img src="<?php echo site_url(); ?>/dist/images/user.png" alt="user" class="userIcon"> -->
         </li> 
         <li>
           <a href="<?php echo site_url(); ?>/admin/search/index.php" class="nav-link"> Search </a>
-          <!-- <img src="<?php echo site_url(); ?>/dist/images/search.png" alt="search" class="searchIcon"> -->
         </li> 
       </ul>
     </div> 
