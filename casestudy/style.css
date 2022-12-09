@@ -1,0 +1,447 @@
+/* normalising */
+* {
+    box-sizing: border-box;
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* fonts */
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('Raleway-Regular.woff2');
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('OpenSans-Reg.woff2');
+}
+
+.header {
+    margin: auto;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.header_description {
+    font-family: 'Raleway-Regular', sans-serif;
+    font-size: 3rem;
+    color: #4A695E;
+}
+
+body {
+    line-height: 2rem;
+}
+
+.hero-image, .allrecipes-features-img, .alpha-img, .beta-img {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.img {
+    width: 70%;
+    margin-top: 3rem;
+    border: 2px solid #C9DED1;
+}
+
+.features-menu {
+    border: 2px solid #C9DED1;
+}
+
+.alpha-image {
+    width: 20%;
+    border: 2px solid #C9DED1;
+}
+
+.beta-image {
+    width: 20%;
+    border: 2px solid #C9DED1;
+}
+
+h2 {
+    font-family: 'Raleway-Regular', san-serif;
+    font-size: 2rem;
+    color: #4A695E;
+    margin: 6rem 0 2rem;
+}
+
+p, li {
+    font-family: 'Open Sans', san-serif;
+    margin: 1rem 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+li {
+    margin: 0 6rem;
+    font-size: 1.2rem;
+}
+
+.case-study {
+    margin: 3rem 8rem;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 2rem 6rem;
+    border: 2px solid #4A695E;
+    background-color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    border-radius: .5rem;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+  
+.github-link:active {
+    transform: translateY(4px);
+}
+
+.website-link:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+  
+.website-link:active {
+    transform: translateY(4px);
+}
+
+.url_link_name {
+    font-size: 1.5rem;
+    color: #000;
+    font-family: "Raleyway-Regular";
+}
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+@media screen and (min-width: 320px) {
+    .header {
+        margin: auto;
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .header_description {
+        font-size: 1.5rem;
+        margin: 1rem 3rem;
+    }
+    
+    body {
+        line-height: 1.7rem;
+    }
+    
+    .hero-image, .allrecipes-features-img, .alpha-img {
+        margin: .5rem;
+    }
+    
+    .img {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .features-menu {
+        width: 100%;
+    }
+    
+    .alpha-image {
+        width: 80%;
+    }
+
+    .beta-img {
+        display: block;
+    }
+    
+    .beta-image {
+        width: 100%;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+        margin: 3rem 0 1rem;
+    }
+    
+    p, li {
+        font-family: 'Open Sans', san-serif;
+        font-size: .9rem;
+        margin: 1rem 1rem;
+    }
+    
+    p {
+        font-size: .9rem;
+    }
+    
+    li {
+        margin: 0 2rem;
+        font-size: .8rem;
+    }
+    
+    .case-study {
+        margin: 3rem 2rem;
+    }
+    
+    .info {
+        display: flex;
+        justify-content: center;
+    }
+    
+    button {
+        margin: 1rem;
+        padding: 10px 17px;
+        text-align: center;
+    }
+
+    .url_link_name {
+        font-size: .8rem;
+    }
+    
+    footer {
+        font-size: .8rem;
+        margin: 1rem;
+        text-align: center;
+    }
+}
+
+
+
+
+@media screen and (min-width: 700px) {
+    .header {
+        margin: auto;
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .header_description {
+        font-size: 2rem;
+        margin: 1rem 3rem;
+    }
+    
+    body {
+        line-height: 1.7rem;
+    }
+    
+    .hero-image, .allrecipes-features-img, .alpha-img {
+        margin: 2rem 0 1rem;
+    }
+    
+    .features-menu {
+        width: 50%;
+    }
+    
+    .alpha-image {
+        width: 40%;
+    }
+
+    .beta-img {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .beta-image {
+        width: 30%;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin: 4rem 1rem 1rem;
+    }
+    
+    p, li {
+        font-family: 'Open Sans', san-serif;
+        font-size: 1rem;
+        margin: 1rem 2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+
+    .goals {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    ul {
+        padding-left: 2rem;
+        margin: 0 1rem 0;
+    }
+    
+    li {
+        margin: 0 2rem;
+        font-size: .9rem; 
+    }
+    
+    .case-study {
+        margin: 3rem 2rem;
+    }
+    
+    .info {
+        display: flex;
+        justify-content: center;
+    }
+    
+    button {
+        margin: 1rem 4rem;
+        padding: 15px 22px;
+        text-align: center;
+    }
+
+    .url_link_name {
+        font-size: 1.3rem;
+    }
+    
+    footer {
+        font-size: 1rem;
+        margin: 2rem 0;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1400px) {
+    .header {
+        margin: auto;
+        margin-top: 6rem;
+        text-align: center;
+    }
+    
+    .header_description {
+        font-family: 'Raleway-Regular', sans-serif;
+        font-size: 3rem;
+        color: #4A695E;
+    
+    }
+    
+    body {
+        line-height: 2rem;
+    }
+    
+    .hero-image, .allrecipes-features-img, .alpha-img, .beta-img {
+        display: flex;
+        justify-content: center;
+        margin: 2rem;
+    }
+    
+    .img {
+        width: 70%;
+        margin-top: 3rem;
+    }
+    
+    .alpha-image {
+        width: 20%;
+    }
+    
+    .beta-image {
+        width: 20%;
+    }
+    
+    h2 {
+        font-family: 'Raleway-Regular', san-serif;
+        font-size: 2rem;
+        color: #4A695E;
+        margin: 6rem 0 2rem;
+    }
+    
+    p, li {
+        font-family: 'Open Sans', san-serif;
+        margin: 1rem 2rem;
+    }
+    
+    p {
+        font-size: 1.1rem;
+    }
+    
+    li {
+        margin: 0 6rem;
+        font-size: 1.2rem;
+    }
+    
+    .case-study {
+        margin: 3rem 8rem;
+    }
+    
+    .info {
+        display: flex;
+        justify-content: center;
+    }
+    
+    button {
+        margin: 2rem 6rem;
+        border: 2px solid #4A695E;
+        background-color: #fff;
+        padding: 15px 32px;
+        text-align: center;
+        border-radius: .5rem;
+        text-decoration: none;
+    }
+    
+    .github-link:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+      
+    .github-link:active {
+        transform: translateY(4px);
+    }
+    
+    .website-link:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+      
+    .website-link:active {
+        transform: translateY(4px);
+    }
+    
+    .url_link_name {
+        font-size: 1.5rem;
+        color: #000;
+        font-family: "Raleway-Regular";
+    }
+    
+    footer {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.1rem;
+        margin: 3rem 0;
+        display: flex;
+        justify-content: center;
+    }
+}
