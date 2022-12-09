@@ -19,38 +19,38 @@ $therapist = get_therapist_by_id($_GET['id']);
             <form action="<?php echo site_url(); ?>/_includes/process-edit-therapists.php" method="POST">
               <div class="block">
                 <label for="">Therapist Name</label>
-                <input class="border-black border-2" type="text" name="name" 
+                <input class="border-black border-2" type="text" name="therapist_name" 
                 value="<?php echo $therapist['therapist_name']; ?>">
               </div>
               <div class="block">
-                <label for="">Therapist Name </label>
-                <input class="border-black border-2" type="text" name="name" 
-                value="<?php echo $therapist['therapist_name']; ?>">              
-              </div>
-              <div class="block">
                 <label for="">Therapist Job</label>
-                <input class="border-black border-2" type="text" name="job"
+                <input class="border-black border-2" type="text" name="therapist_job"
                 value="<?php echo $therapist['therapist_job']; ?>">
               </div>
               <div class="block">
                 <label for="">Therapist Pronoun</label>
-                <input class="border-black border-2" type="text" name="pronoun"
+                <input class="border-black border-2" type="text" name="therapist_pronoun"
                 value="<?php echo $therapist['therapist_pronoun']; ?>">
               </div>
               <div class="block">
+                <label for="">Therapist Image Path</label>
+                <input class="border-black border-2" type="text" name="image_path"
+                value="<?php echo $therapist['image_path']; ?>">
+              </div>
+              <div class="block">
                 <label for="">Therapist Email</label>
-                <input class="border-black border-2" type="text" name="email"
+                <input class="border-black border-2" type="text" name="therapist_email"
                 value="<?php echo $therapist['therapist_email']; ?>">
               </div>
               <div class="block">
                 <label for="">Therapist Phone</label>
-                <input class="border-black border-2" type="number" name="phone"
+                <input class="border-black border-2" type="number" name="therapist_phone"
                 value="<?php echo $therapist['therapist_phone']; ?>">
               </div>
               <div class="block">
                 <label for="">Therapist About</label>
                 <br>
-                <textarea class="border-black border-2 js-tinymce" name="about" id="" cols="30"
+                <textarea class="border-black border-2 js-tinymce" name="therapist_about" id="" cols="30"
                   rows="10">
                   <?php echo $therapist['therapist_about']; ?>
                 </textarea>
@@ -58,7 +58,7 @@ $therapist = get_therapist_by_id($_GET['id']);
               <div class="block">
                 <label for="">Therapist Specialties</label>
                 <br>
-                <textarea class="border-black border-2 js-tinymce" name="specialties" id="" cols="30"
+                <textarea class="border-black border-2 js-tinymce" name="therapist_specialties" id="" cols="30"
                   rows="10">
                   <?php echo $therapist['therapist_specialties']; ?>
                 </textarea>
@@ -66,7 +66,7 @@ $therapist = get_therapist_by_id($_GET['id']);
               <div class="block">
                 <label for="">Therapist Issues</label>
                 <br>
-                <textarea class="border-black border-2 js-tinymce" name="issues" id="" cols="30"
+                <textarea class="border-black border-2 js-tinymce" name="therapist_issues" id="" cols="30"
                   rows="10">
                   <?php echo $therapist['therapist_issues']; ?>
                 </textarea>

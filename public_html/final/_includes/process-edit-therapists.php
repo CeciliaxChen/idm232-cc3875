@@ -14,6 +14,7 @@ $therapist_phone = sanitize_value($_POST['therapist_phone']);
 $therapist_about = sanitize_value($_POST['therapist_about']);
 $therapist_specialties = sanitize_value($_POST['therapist_specialties']);
 $therapist_issues = sanitize_value($_POST['therapist_issues']);
+$image_path = sanitize_value($_POST['image_path']);
 $id_value = sanitize_value($_POST['id']);
 
 // var_dump($therapist_job);
@@ -29,7 +30,8 @@ therapist_email = '{$therapist_email}',
 therapist_phone = '{$therapist_phone}',
 therapist_about = '{$therapist_about}',
 therapist_specialties = '{$therapist_specialties}',
-therapist_issues = '{$therapist_issues}'
+therapist_issues = '{$therapist_issues}',
+image_path = '{$image_path}'
  WHERE id = '{$id_value}'";
 
 // var_dump($id_value);
@@ -40,9 +42,9 @@ therapist_issues = '{$therapist_issues}'
 $result = mysqli_query($db_connection, $query);
 
 if ($result) {
-    redirect_to('/admin/users');
+    redirect_to('/admin/therapists');
 } else {
     $error_message = 'User was not updated';
-    redirect_to('/admin/users?error=' . $error_message);
+    redirect_to('/admin/therapists?error=' . $error_message);
 }
 ?>

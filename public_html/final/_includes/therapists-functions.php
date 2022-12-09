@@ -7,12 +7,12 @@
  * @param  string $price - therapist price of the therapist
  * @return object - mysqli_result
  */
-function add_therapists($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues)
+function add_therapists($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues, $image_path)
 {
     global $db_connection;
     $query = 'INSERT INTO therapists';
-    $query .= ' (therapist_name, therapist_job, therapist_pronoun, therapist_email, therapist_phone, therapist_about, therapist_specialties, therapist_issues)';
-    $query .= " VALUES ('$therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues')";
+    $query .= ' (therapist_name, therapist_job, therapist_pronoun, therapist_email, therapist_phone, therapist_about, therapist_specialties, therapist_issues, image_path)';
+    $query .= " VALUES ('$therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues, $image_path')";
     $result = mysqli_query($db_connection, $query);
     return $result;
 }
@@ -38,11 +38,20 @@ function get_therapist_by_id($id)
     }
 }
 
-function edit_therapist($name, $price, $description, $id)
+function edit_therapist($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues, $image_path)
 {
     global $db_connection;
     $query = 'UPDATE therapists';
-    $query .= " SET therapist_name = '{$therapist_name}', therapist_job = '{$therapist_job}', therapist_pronoun = '{$therapist_pronoun}', therapist_email = '{$therapist_email}', therapist_phone = '{$therapist_phone}', therapist_about = '{$therapist_about}', therapist_specialties = '{$therapist_specialties}', therapist_issues = '{$therapist_issues}'";
+    $query .= " SET 
+    therapist_name = '{$therapist_name}', 
+    therapist_job = '{$therapist_job}', 
+    therapist_pronoun = '{$therapist_pronoun}', 
+    therapist_email = '{$therapist_email}', 
+    therapist_phone = '{$therapist_phone}', 
+    therapist_about = '{$therapist_about}', 
+    therapist_specialties = '{$therapist_specialties}', 
+    therapist_issues = '{$therapist_issues}', 
+    image_path = '{$image_path}'";
     $query .= " WHERE id = $id";
     $result = mysqli_query($db_connection, $query);
     return $result;
@@ -56,15 +65,15 @@ function delete_therapist_by_id($id)
     return $result;
 }
 
-function add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues)
+function add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $therapist_email, $therapist_phone, $therapist_about, $therapist_specialties, $therapist_issues, $image_path)
 {
     global $db_connection;
     $default_password = 'idm232';
     $password = password_hash($default_password, PASSWORD_DEFAULT);
 
     $query = 'INSERT INTO therapists';
-    $query .= ' (therapist_name, therapist_job, therapist_pronoun, therapist_email, therapist_phone, therapist_about, therapist_specialties, therapist_issues)';
-    $query .= " VALUES ('$therapist_name', '$therapist_job', '$therapist_pronoun', '$therapist_email', '$therapist_phone', '$therapist_about', '$therapist_specialties', '$therapist_issues')";
+    $query .= ' (therapist_name, therapist_job, therapist_pronoun, therapist_email, therapist_phone, therapist_about, therapist_specialties, therapist_issues, image_path)';
+    $query .= " VALUES ('$therapist_name', '$therapist_job', '$therapist_pronoun', '$therapist_email', '$therapist_phone', '$therapist_about', '$therapist_specialties', '$therapist_issues', '$image_path')";
     // var_dump($query);
     // die();
 

@@ -37,6 +37,10 @@ $result = mysqli_query($db_connection, $query);
                 <input class="border-black border-2" type="text" name="therapist_pronoun">
               </div>
               <div class="block">
+                <label for="">Therapist Image Path</label>
+                <input class="border-black border-2" type="text" name="image_path">
+              </div>
+              <div class="block">
                 <label for="">Therapist Email</label>
                 <input class="border-black border-2" type="text" name="therapist_email">
               </div>

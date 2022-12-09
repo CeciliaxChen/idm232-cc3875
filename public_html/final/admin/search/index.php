@@ -63,21 +63,24 @@ if ($results->num_rows > 0) {
       echo '<p class="text-red-500">' . $_GET['error'] . '</p>';
   }?>
       </div>
-      <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-        <button type="button"
-          class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
-          <a href="<?php echo site_url() . '/admin/therapists/create.php' ?>">
-            Add Therapist</a></button>
-      </div>
     </div>
 
     <?php
+    $site_url = site_url();
     // If we have results, show them
       if ($therapists_results) {
           while ($therapists_results = mysqli_fetch_assoc($results)) {
-              echo '<div class="flex flex-row justify-center items-center">';
-              echo '<h2>' . $therapists_results['therapist_name'] . '</h2>';
-              echo '</div>';
+            echo "
+            <a href='{$site_url}/detail.php?id={$therapists_results['id']}' class='' >
+                <div class='flex flex-row justify-center items-center'>
+                 <img class='' width='100px' height='100px' src='{$site_url}{$therapists_results['image_path']}' alt=''>
+                    <div class=''>
+                        <h2 class=''>{$therapists_results['therapist_name']}</h2>
+                    </div> 
+
+                </div>
+            </a>
+        ";
           }
       }
 ?>

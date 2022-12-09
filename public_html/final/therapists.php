@@ -1,17 +1,51 @@
 <?php
 include_once __DIR__ . '/app.php';
-$page_title = 'Home';
+$page_title = 'View All Therapists';
 include_once __DIR__ . '/_components/header.php';
+
+$query = 'SELECT * FROM therapists ORDER BY therapist_name ASC';
+$result = mysqli_query($db_connection, $query);
+
 ?>
 
-<h1> Therapists </h1> 
-<?php     $site_url = site_url();
- ?>
+<h1> View all Therapists </h1> 
+<?php     
+$site_url = site_url();
+?>
 
-<!-- <a href="<?php echo site_url(); ?>/therapists.php" class="therapist"> Therapist 1 </a>  -->
 
-<div class="therapist1_details"> 
-    <h2 class="therapist-name"> <a href="<?php echo $site_url; ?>/detail.php?id=2">Ashley Annestedt</a> </h2> 
+<?php
+if (!isset($result)) {
+    echo '$therapists variable is not defined. Please check the code.';
+}
+?>
+
+<?php
+    $site_url = site_url();
+    while ($therapists = mysqli_fetch_array($result)) {
+        echo "
+        <div class='therapist-description'> 
+            <a href='{$site_url}/detail.php?id={$therapists['id']}'>
+                <div class=''>
+                    <div class=''>
+                        <p class=''>{$therapists['therapist_name']}</p>
+                        <p class=''>{$therapists['therapist_job']}</p>
+                        <p class=''>{$therapists['therapist_specialties']}</p>
+                    </div> 
+                </div>
+            </a>
+        </div> 
+        ";
+    }
+?>
+
+
+
+
+<!-- <a href="<php echo site_url(); ?>/therapists.php" class="therapist"> Therapist 1 </a>  -->
+
+<!-- <div class="therapist1_details"> 
+    <h2 class="therapist-name"> <a href="<php echo $site_url; ?>/detail.php?id=2">Ashley Annestedt</a> </h2> 
     <div class="therapist-job"> 
         <h3> Therapist Job </h3> 
         <p class="therapist-job"> Clinical Social Work / Therapist, LCSW </p>
@@ -41,7 +75,7 @@ include_once __DIR__ . '/_components/header.php';
         <h3> Therapist Issues </h3> 
         <p class="therapist-issues"> Anxiety, Women's Issues </p>
     </div> 
-</div>
+</div> -->
 
 
 <?php include_once __DIR__ . '/_components/home-hero.php'; ?>
