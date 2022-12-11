@@ -1,4 +1,4 @@
-/* html,
+k/* html,
 body,
 div,
 span,
@@ -147,6 +147,11 @@ table {
   src: url('../../fonts/Raleway-Medium.woff2');
 }
 
+@font-face {
+  font-family: 'OpenSans-Reg';
+  src: url('../../fonts/OpenSans-Reg.woff2');
+}
+
 h1, h2, h3, h4, h5, li {
   font-family: 'Raleway-Regular', sans-serif;
 }
@@ -162,10 +167,6 @@ h1 {
 /* HEADER */
 header {
   margin: 3rem 0 0 3rem;
-}
-
-.table {
-  display: block;
 }
 
 .header-container {
@@ -307,14 +308,182 @@ li {
 
 
 
+/* ADMIN */
+.therapists-text {
+  margin: 1rem 4rem;
+}
+
+.add-therapist-button {
+  font-family: 'Raleway-Regular', sans-serif;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  border: 1px solid #4A695E;
+  border-radius: .5rem;
+  background-color: #fff;
+  margin-left: 4rem;
+}
+
+.table-container{
+  overflow-x: auto;
+  padding: 20px 30px;
+}
+
+table, tr, th {
+  border: 1px solid #000;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 90%;
+}
+
+th {
+  padding: 10px 15px;
+  font-family: 'Raleway-Regular';
+  color: #4A695E;
+}
+td {
+  padding: 10px 15px;
+  text-align: left;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'OpenSans-Reg', sans-serif;
+}
 
 
 
+
+
+
+/* THERAPISTS */
+.view-all-therapists {
+  margin: 1rem 4rem;
+}
+
+.therapist-description {
+  border: 5px solid #bcd1c4;
+  border-radius: 1rem;
+  margin: 1rem 4rem;
+  padding: 1rem;
+}
 
 .therapist-description a { 
   text-decoration: none;
 }
 
+.therapist-description-card {
+  display: flex;
+}
+
+.therapist-image {
+  width: 50%;
+  border-radius: 1rem;
+  margin: 0 2rem;
+}
+
+.therapist-description-text {
+  margin: 3rem 0;
+}
+
+.therapist-description-detail-name {
+  font-size: 2rem;
+  font-family: 'Raleway-Medium';
+  margin: 1rem;
+}
+
+.therapist-description-detail-job {
+  font-size: 1rem;
+  font-family: 'Raleway-Regular';
+  margin: 1rem;
+}
+
+
+
+
+
+
+
+/* DETAIL PAGE */
+.therapist-detail-page {
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.therapist-detail-image {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+.therapist-detail-general {
+  margin: 1rem;
+}
+
+.detail_therapist-name {
+  font-size: 2rem;
+  color: #4A695E;
+  font-family: 'Raleway-Regular';
+}
+
+
+.detail_therapist-job, .detail_therapist-pronoun, .detail_therapist-email, .detail_therapist-phone, .therapist-detail-contact, .therapist-detail-spec {
+  font-size: 1rem;
+  font-family: 'OpenSans-Reg', sans-serif;
+}
+
+
+
+
+
+/* ADD THERAPISTS */
+.add-therapist {
+  margin: 1rem 4rem;
+  font-size: 2rem;
+}
+
+.add-form-section {
+  margin: 0 4rem;
+}
+
+div .block {
+  font-family: 'Raleway-Regular';
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.form-filling {
+  margin: 0 1rem;
+}
+
+.input-box {
+  padding: 8px 20px;
+  margin-left: 1rem;
+}
+
+.add-submit {
+  font-family: 'Raleway-Regular', sans-serif;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid #4A695E;
+  border-radius: .5rem;
+  background-color: #fff;
+}
+
+.add-submit:hover {
+  box-shadow: 0 12px 16px 0 rgba(22, 22, 22, 0.24),0 17px 50px 0 rgba(44, 44, 44, 0.19);
+}
+
+.add-submit:active {
+  transform: translateY(4px);
+}
 
 
 
@@ -324,3 +493,13 @@ footer {
   margin: 2rem 0;
   font-family: 'Raleway-Thin', sans-serif;
 }
+
+
+
+
+
+
+
+
+
+

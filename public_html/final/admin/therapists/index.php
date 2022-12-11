@@ -9,8 +9,7 @@ $therapists = get_therapists();
   <div class="px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
-        <h1 class="text-xl font-semibold text-gray-900">Therapists</h1>
-        <p class="mt-2 text-sm text-gray-700"> A list of therapists the users in your account including their name, job, pronoun, email, phone, about, specialties, issues 
+        <h1 class=" therapists-text text-xl font-semibold text-gray-900">Therapists</h1>
         </p>
         <?php
         // If error query param exist, show error message
@@ -20,7 +19,7 @@ $therapists = get_therapists();
       </div>
       <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
         <button type="button"
-          class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
+          class="add-therapist-button inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
           <a href="<?php echo site_url() . '/admin/therapists/create.php' ?>">
             Add Therapist</a></button>
       </div>

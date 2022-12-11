@@ -3,9 +3,10 @@ if (!isset($therapists)) {
     echo '$therapists variable is not defined. Please check the code.';
 }
 ?>
+<div class="table-container" style="overflow-x: auto;"> 
 <table class="table text-white">
   <thead>
-    <tr>
+    <tr class="admin-table">
       <th scope="col">ID</th>
       <th scope="col">Therapist Name</th>
       <th scope="col">Therapist Job</th>
@@ -46,3 +47,4 @@ if (!isset($therapists)) {
     ?>
   </tbody>
 </table>
+</div> 

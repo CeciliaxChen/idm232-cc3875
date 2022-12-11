@@ -19,20 +19,20 @@ if (!isset($result)) {
     $site_url = site_url();
     while ($therapists = mysqli_fetch_array($result)) {
         echo "
-        <div class=''>
-            <div class=''>
-                <div class=''>
-                    <div>
-                        <img class='' width='500px' height='500px' src='{$site_url}/{$therapists['image_path']}' alt=''>
-                        <h2 class='therapist-name'>{$therapists['therapist_name']}</h2>
-                        <p class=''> Job Title: {$therapists['therapist_job']}</p>
-                        <p class=''> Pronoun: {$therapists['therapist_pronoun']}</p>
-                        <p class=''> Email: {$therapists['therapist_email']}</p>
-                        <p class=''> Phone Number: {$therapists['therapist_phone']}</p>
-                        <p class=''> About: {$therapists['therapist_about']}</p>
-                        <p class=''> Specialties: {$therapists['therapist_specialties']}</p>
-                        <p class=''> Issues: {$therapists['therapist_issues']}</p>
-                    </div>
+        <div class='therapist-detail-page'>
+        <img class='therapist-detail-image' src='{$site_url}/{$therapists['image_path']}' alt=''>
+            <div class='therapist-detail-general'>
+                <h2 class='detail_therapist-name'>{$therapists['therapist_name']}</h2>
+                <p class='detail_therapist-job'> Job Title: {$therapists['therapist_job']}</p>
+                <p class='detail_therapist-pronoun'> Pronoun: {$therapists['therapist_pronoun']}</p>
+                <div class='therapist-detail-contact'>
+                    <p class='detail_therapist-email'> Email: {$therapists['therapist_email']}</p>
+                    <p class='detail_therapist-phone'> Phone Number: {$therapists['therapist_phone']}</p>
+                        <div class='therapist-detail-spec'>
+                            <p class='detail_therapist-about'> About: {$therapists['therapist_about']}</p>
+                            <p class='detail_therapist-specialties'> Specialties: {$therapists['therapist_specialties']}</p>
+                            <p class='detail_therapist-issues'> Issues: {$therapists['therapist_issues']}</p>
+                        </div>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@ $result = mysqli_query($db_connection, $query);
 
 ?>
 
-<h1> View all Therapists </h1> 
+<h1 class="view-all-therapists"> View all Therapists </h1> 
 <?php     
 $site_url = site_url();
 ?>
@@ -25,15 +25,15 @@ if (!isset($result)) {
     while ($therapists = mysqli_fetch_array($result)) {
         echo "
         <div class='therapist-description'> 
-            <a href='{$site_url}/detail.php?id={$therapists['id']}'>
-                <div class=''>
+            <a href='{$site_url}/detail.php?id={$therapists['id']}' class='therapist-description-link'>
+                <div class='therapist-description-card'>
                     <div class='therapist-description-image'> 
                         <img class='therapist-image' src='{$site_url}/{$therapists['image_path']}' alt=''>
                     </div> 
                     <div class='therapist-description-text'>
-                        <p class=''>{$therapists['therapist_name']}</p>
-                        <p class=''>{$therapists['therapist_job']}</p>
-                        <p class=''>{$therapists['therapist_specialties']}</p>
+                        <p class='therapist-description-detail-name'>{$therapists['therapist_name']}</p>
+                        <p class='therapist-description-detail-job'>{$therapists['therapist_job']}</p>
+                        <p class='therapist-description-detail'>{$therapists['therapist_specialties']}</p>
                     </div> 
                 </div>
             </a>
