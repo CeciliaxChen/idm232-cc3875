@@ -1,4 +1,4 @@
-<div class="mx-auto my-16 max-w-7xl px-4">
+<div class="welcome-home mx-auto my-16 max-w-7xl px-4">
   <div class="welcome">
     <h1 class="font-bold tracking-tight text-gray-900 text-6xl welcome-intro">
       Welcome to Couch Therapy</h1>

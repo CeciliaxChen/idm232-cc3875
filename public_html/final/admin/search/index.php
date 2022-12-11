@@ -68,7 +68,7 @@ if ($results->num_rows > 0) {
                 <div class='therapist-card2 flex flex-row justify-center items-center'>
                  <img class='therapist-card2-img' src='{$site_url}{$therapists_results['image_path']}' alt=''>
                     <div class=''>
-                        <h2 class=''>{$therapists_results['therapist_name']}</h2>
+                        <h2 class='therapist-card2-name'>{$therapists_results['therapist_name']}</h2>
                     </div> 
                 </div>
             </a>
