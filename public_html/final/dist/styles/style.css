@@ -155,7 +155,11 @@ h1 {
   color: #4A695E;
 }
 
-/* Header */
+
+
+
+
+/* HEADER */
 header {
   margin: 3rem 0 0 3rem;
 }
@@ -208,7 +212,11 @@ li {
 }
 
 
-/* Homepage Home-Hero */
+
+
+
+
+/* HOMEPAGE HOME-HERO */
 .welcome {
   margin: 6rem 6rem 0;
   font-size: 2.5rem;
@@ -236,6 +244,64 @@ li {
 
 
 
+/* SEARCH */
+.search-results {
+  margin: 0 4rem 2rem;
+  font-size: 2rem;
+}
+
+.search-bar {
+  margin: 0 4rem 2rem;
+}
+
+.search-input {
+  font-family: 'Raleway-Thin';
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  padding-right: 3rem;
+  border: 1px solid #a5bdae;
+  border-radius: .5rem;
+}
+
+.submit-button {
+  font-family: 'Raleway-Regular', sans-serif;
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+  border: 1px solid #4A695E;
+  border-radius: .5rem;
+  background-color: #fff;
+}
+
+.submit-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(22, 22, 22, 0.24),0 17px 50px 0 rgba(44, 44, 44, 0.19);
+}
+
+.submit-button:active {
+  transform: translateY(4px);
+}
+
+.search-text {
+  margin-left: 7rem;
+}
+
+.therapist-card2-whole {
+  display: flex;
+}
+
+.therapist-card2-link {
+  text-decoration: none;
+}
+
+.therapist-card2 {
+  margin: 4rem 7rem;
+}
+
+.therapist-card2-img {
+  width: 15%;
+}
+
+
+
 
 
 
@@ -252,7 +318,7 @@ li {
 
 
 
-/* Footer  */
+/* FOOTER */
 footer {
   text-align: center;
   margin: 2rem 0;

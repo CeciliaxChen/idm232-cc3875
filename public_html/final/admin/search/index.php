@@ -11,7 +11,6 @@ if (isset($_GET['search'])) {
     $search = '';
 }
 
-
 $query = 'SELECT *';
 $query .= ' FROM therapists';
 $query .= " WHERE therapist_name LIKE '%{$search}%'";
@@ -23,7 +22,6 @@ $query .= " OR therapist_about LIKE '%{$search}%'";
 $query .= " OR therapist_specialties LIKE '%{$search}%'";
 $query .= " OR therapist_issues LIKE '%{$search}%'";
 $results = mysqli_query($db_connection, $query);
-
 
 
 // Check if was have more than 0 results from db
@@ -39,13 +37,13 @@ if ($results->num_rows > 0) {
   <div class="px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
-        <h1 class="text-xl font-semibold text-gray-900">Search Results</h1>
-        <form action="<?php echo site_url(); ?>/admin/search" method="GET">
-          <input class=" border-black border-2" type="text" name="search" id="search" placeholder="Search"
+        <h1 class="text-xl font-semibold text-gray-900 search-results">Search Results</h1>
+        <form action="<?php echo site_url(); ?>/admin/search" method="GET" class="search-bar">
+          <input class="search-input border-black border-2" type="text" name="search" id="search" placeholder="Search"
             value="<?php echo $search; ?>">
-          <button type="submit">Search</button>
+          <button type="submit" class="submit-button">Search</button>
         </form>
-        <h2>You searched for "<?php echo $search; ?>"</h2>
+        <h2 class="search-text">You searched for"<?php echo $search; ?>"</h2>
         <?php
         // If no results, echo no results
         if (!$therapists_results) {
@@ -66,9 +64,9 @@ if ($results->num_rows > 0) {
       if ($therapists_results) {
           while ($therapists_results = mysqli_fetch_assoc($results)) {
             echo "
-            <a href='{$site_url}/detail.php?id={$therapists_results['id']}' class='' >
-                <div class='flex flex-row justify-center items-center'>
-                 <img class='' src='{$site_url}{$therapists_results['image_path']}' alt=''>
+            <a href='{$site_url}/detail.php?id={$therapists_results['id']}' class='therapist-card2-link'>
+                <div class='therapist-card2 flex flex-row justify-center items-center'>
+                 <img class='therapist-card2-img' src='{$site_url}{$therapists_results['image_path']}' alt=''>
                     <div class=''>
                         <h2 class=''>{$therapists_results['therapist_name']}</h2>
                     </div> 
