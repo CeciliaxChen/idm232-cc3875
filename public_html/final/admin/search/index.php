@@ -68,7 +68,7 @@ if ($results->num_rows > 0) {
             echo "
             <a href='{$site_url}/detail.php?id={$therapists_results['id']}' class='' >
                 <div class='flex flex-row justify-center items-center'>
-                 <img class='' width='100px' height='100px' src='{$site_url}{$therapists_results['image_path']}' alt=''>
+                 <img class='' src='{$site_url}{$therapists_results['image_path']}' alt=''>
                     <div class=''>
                         <h2 class=''>{$therapists_results['therapist_name']}</h2>
                     </div> 

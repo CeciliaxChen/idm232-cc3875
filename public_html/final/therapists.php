@@ -27,7 +27,10 @@ if (!isset($result)) {
         <div class='therapist-description'> 
             <a href='{$site_url}/detail.php?id={$therapists['id']}'>
                 <div class=''>
-                    <div class=''>
+                    <div class='therapist-description-image'> 
+                        <img class='therapist-image' src='{$site_url}/{$therapists['image_path']}' alt=''>
+                    </div> 
+                    <div class='therapist-description-text'>
                         <p class=''>{$therapists['therapist_name']}</p>
                         <p class=''>{$therapists['therapist_job']}</p>
                         <p class=''>{$therapists['therapist_specialties']}</p>
