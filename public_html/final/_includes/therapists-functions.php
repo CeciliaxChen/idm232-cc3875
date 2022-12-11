@@ -75,7 +75,7 @@ function add_therapist($therapist_name, $therapist_job, $therapist_pronoun, $the
     $query = 'INSERT INTO therapists';
     $query .= ' (therapist_name, therapist_job, therapist_pronoun, therapist_email, therapist_phone, therapist_about, therapist_specialties, therapist_issues, image_path)';
     $query .= " VALUES ('$therapist_name', '$therapist_job', '$therapist_pronoun', '$therapist_email', '$therapist_phone', '$therapist_about', '$therapist_specialties', '$therapist_issues', '$image_path')";
-    // var_dump($query);
+    // ($query);
     // die();
 
     $result = mysqli_query($db_connection, $query);

@@ -11,11 +11,6 @@ if (isset($_GET['search'])) {
     $search = '';
 }
 
-// echo '<pre>';
-// var_dump($_GET);
-// echo '</pre>';
-// die;
-
 
 $query = 'SELECT *';
 $query .= ' FROM therapists';
@@ -77,7 +72,6 @@ if ($results->num_rows > 0) {
                     <div class=''>
                         <h2 class=''>{$therapists_results['therapist_name']}</h2>
                     </div> 
-
                 </div>
             </a>
         ";

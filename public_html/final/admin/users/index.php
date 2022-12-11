@@ -60,8 +60,6 @@ $therapists = get_therapists();
     $site_url = site_url();
     
     while ($therapist = mysqli_fetch_array($therapists)) {
-        // var_dump($therapist);
-        // die();
         echo "
           <tr>
             <td>{$therapist['id']}</td>

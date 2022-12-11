@@ -1,20 +1,3 @@
-<?php
-$main_navigation = [
-    [
-        'title' => 'About',
-        'url' => 'about.php',
-    ],
-    [
-        'title' => 'Contact',
-        'url' => 'contact.php',
-    ],
-    [
-        'title' => 'Book',
-        'url' => 'book.php',
-    ],
-
-];
-
 ?>
 <header class="px-2 py-4 bg-black">
   <div class="max-w-7xl flex justify-between mx-auto">
@@ -41,16 +24,3 @@ $main_navigation = [
 
   </div>
 </header>
-
-
-<!-- <h1> Couch Therapy </h1>
-    <header class="header">
-        <!-- couch logo -->
-        <img src="<?php echo site_url(); ?>/dist/images/couch.png" alt="couch" class="therapyLogo"> 
-        <!-- profile -->
-        <img src="<?php echo site_url(); ?>/dist/images/user.png" alt="user" class="userIcon">
-        <!-- admin -->
-        <img src="<?php echo site_url(); ?>/dist/images/admin.png" alt="admin" class="adminIcon"> 
-        <!-- search -->
-        <img src="<?php echo site_url(); ?>/dist/images/search.png" alt="search" class="searchIcon">
-    </header> -->
